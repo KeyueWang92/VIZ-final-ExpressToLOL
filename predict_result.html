@@ -11,12 +11,16 @@
     	<script type="text/javascript">
     		function getResult(){
     			// document.getElementById("result").innerHTML = "You result is: "+ localStorage.sum;
-                var tags = localStorage.answerlist[0];
-                var weights = localStorage.answerweight[0];
+                var tags = localStorage.answerlist;
+                var weights = localStorage.answerweight;
     			var pjs = Processing.getInstanceById("score");
-    			console.log(pjs);
+                console.log(tags);
+                console.log(weights);
     			if (pjs) {
-    				pjs.draw_text(tags);
+                    pjs.convert_js_to_java(tags,weights);
+    				// pjs.draw_text(tags,weights);
+                    pjs.assign_scores();
+                    pjs.get_result();
     			}
     			else setTimeout(getResult,1000);
     		}
@@ -24,7 +28,7 @@
     </head>
     <body>
     	<div id="result"></div>
-    	<canvas id="score" data-processing-sources="result.pde"></canvas>
+    	<canvas id="score" data-processing-sources="result.pde Parser.pde"></canvas>
     	<script type="text/javascript">
     		getResult();
     	</script>

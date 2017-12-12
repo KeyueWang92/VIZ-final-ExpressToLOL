@@ -17,20 +17,39 @@
       			var radios = document.getElementsByName(field);
       			for (var i = 0, length = radios.length; i < length; i++) {
       				if (radios[i].checked) {
-      					return parseInt(radios[i].value);
+      					return radios[i].value;
       					break;
       				}
       			}
     		}
+    		
     		function getSum(){
     			var answerlist = []
     			var answerweight = []
     			answerlist[0] = getAnswer('question1a');
-    			answerlist[1] = getAnswer('question1b');
+    			answerlist[1] = getAnswer('question2a');
+    			answerlist[2] = getAnswer('question3a');
+    			answerlist[3] = getAnswer('question4a');
+    			answerlist[4] = getAnswer('question5a');
+    			answerlist[5] = getAnswer('question6a');
+    			answerlist[6] = getAnswer('question7a');
+    			answerlist[7] = getAnswer('question8a');
+    			answerlist[8] = getAnswer('question9a');
+    			answerlist[9] = getAnswer('question10a');
+    			answerlist[10] = getAnswer('question11a');
+
 
     			answerweight[0] = getAnswer('question1b');
     			answerweight[1] = getAnswer('question2b');
-
+    			answerweight[2] = getAnswer('question3b');
+    			answerweight[3] = getAnswer('question4b');
+    			answerweight[4] = getAnswer('question5b');
+    			answerweight[5] = getAnswer('question6b');
+    			answerweight[6] = getAnswer('question7b');
+    			answerweight[7] = getAnswer('question8b');
+    			answerweight[8] = getAnswer('question9b');
+    			answerweight[9] = getAnswer('question10b');
+    			answerweight[10] = getAnswer('question11b');
 				localStorage.setItem("answerlist",answerlist);
 				localStorage.setItem("answerweight",answerweight);
 				console.log(localStorage.answerlist);
@@ -53,7 +72,7 @@
 		</nav>
 
 		<div class="site-wrapper">
-      		<div class="site-wrapper-inner">
+      		<div class="site-wrapper-inner"  style="background-image: url(background.jpg); background-size: cover;">
         		<div class="cover-container">
 	      			<div class="inner cover">
 	      				<br>
@@ -86,7 +105,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question1b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question1b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question1b" id="option2" autocomplete="off" value="2">2
@@ -98,7 +117,7 @@
 							    <input type="radio" name="question1b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question1b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question1b" id="option5" autocomplete="off" value="5" >5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question1b" id="option6" autocomplete="off" value="6">6
@@ -133,7 +152,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question2b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question2b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question2b" id="option2" autocomplete="off" value="2">2
@@ -145,7 +164,7 @@
 							    <input type="radio" name="question2b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question2b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question2b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question2b" id="option6" autocomplete="off" value="6">6
@@ -179,7 +198,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question3b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question3b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question3b" id="option2" autocomplete="off" value="2">2
@@ -191,7 +210,7 @@
 							    <input type="radio" name="question3b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question3b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question3b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question3b" id="option6" autocomplete="off" value="6">6
@@ -234,7 +253,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question4b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question4b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question4b" id="option2" autocomplete="off" value="2">2
@@ -246,7 +265,7 @@
 							    <input type="radio" name="question4b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question4b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question4b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question4b" id="option6" autocomplete="off" value="6">6
@@ -267,7 +286,7 @@
 							</div>
 							<br><br><br>
 
-							<h5> question5a: appearance. </h5><br>
+							<h5> question5a: role. </h5><br>
 							<div class="btn-group-vertical" data-toggle="buttons">
 							  <label class="btn btn-primary active">
 							    <input type="radio" name="question5a" id="option1" autocomplete="off" value="Fighter" checked> Fighter
@@ -296,7 +315,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question5b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question5b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question5b" id="option2" autocomplete="off" value="2">2
@@ -308,7 +327,7 @@
 							    <input type="radio" name="question5b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question5b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question5b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question5b" id="option6" autocomplete="off" value="6">6
@@ -343,7 +362,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question6b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question6b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question6b" id="option2" autocomplete="off" value="2">2
@@ -355,7 +374,7 @@
 							    <input type="radio" name="question6b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question6b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question6b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question6b" id="option6" autocomplete="off" value="6">6
@@ -389,7 +408,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question7b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question7b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question7b" id="option2" autocomplete="off" value="2">2
@@ -401,7 +420,7 @@
 							    <input type="radio" name="question7b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question7b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question7b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question7b" id="option6" autocomplete="off" value="6">6
@@ -435,7 +454,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question8b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question8b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question8b" id="option2" autocomplete="off" value="2">2
@@ -447,7 +466,7 @@
 							    <input type="radio" name="question8b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question8b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question8b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question8b" id="option6" autocomplete="off" value="6">6
@@ -481,7 +500,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question9b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question9b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question9b" id="option2" autocomplete="off" value="2">2
@@ -493,7 +512,7 @@
 							    <input type="radio" name="question9b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question9b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question9b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question9b" id="option6" autocomplete="off" value="6">6
@@ -528,7 +547,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question10b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question10b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question10b" id="option2" autocomplete="off" value="2">2
@@ -540,7 +559,7 @@
 							    <input type="radio" name="question10b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question10b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question10b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question10b" id="option6" autocomplete="off" value="6">6
@@ -574,7 +593,7 @@
 							<p> 1: not at all likely, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10: extremely likely </p>
 							<div class="btn-group" data-toggle="buttons">
 							  <label class="btn btn-primary active">
-							    <input type="radio" name="question11b" id="option1" autocomplete="off" value="1">1
+							    <input type="radio" name="question11b" id="option1" autocomplete="off" value="1" checked>1
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question11b" id="option2" autocomplete="off" value="2">2
@@ -586,7 +605,7 @@
 							    <input type="radio" name="question11b" id="option4" autocomplete="off" value="4">4
 							  </label>
 							  <label class="btn btn-primary">
-							    <input type="radio" name="question11b" id="option5" autocomplete="off" value="5" checked>5
+							    <input type="radio" name="question11b" id="option5" autocomplete="off" value="5">5
 							  </label>
 							  <label class="btn btn-primary">
 							    <input type="radio" name="question11b" id="option6" autocomplete="off" value="6">6
@@ -604,7 +623,7 @@
 							    <input type="radio" name="question11b" id="option10" autocomplete="off" value="10">10
 							  </label>
 							</div>
-							<br><br><br>
+							<br><br><br><br><br>
 							<input type="button" class="btn btn-primary" value="CONFIRM" onclick="getSum()"/>
 							&nbsp; &nbsp;
 							<input type="submit" class="btn btn-primary" value="SUBMIT" onclick="location.href='predict_result.html'"/><br><br><br>
