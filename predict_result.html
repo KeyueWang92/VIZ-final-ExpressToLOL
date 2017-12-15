@@ -14,7 +14,6 @@
 
     	<script type="text/javascript">
     		function getResult(){
-    			// document.getElementById("result").innerHTML = "You result is: "+ localStorage.sum;
                 var tags = localStorage.answerlist;
                 var weights = localStorage.answerweight;
     			var pjs = Processing.getInstanceById("score");
@@ -41,7 +40,7 @@
 
         <div class="site-wrapper">
             <div class="site-wrapper-inner"  style="background:#0a0a0a">
-    	       <canvas id="score" data-processing-sources="Button.pde LineChart.pde lol.pde multi.pde Parser.pde RadarChart.pde" style="outline:none"></canvas>
+    	       <canvas id="score" data-processing-sources="Button.pde LineChart.pde single.pde lol.pde multi.pde Parser.pde RadarChart.pde" style="outline:none"></canvas>
             </div>
         </div>
 

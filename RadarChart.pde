@@ -180,6 +180,7 @@ class RadarObj {
     r = random(0,255);
     g = random(0,255);
     b = random(0,255);
+    
     endP = new Pt(random(-1, 1) * 2 * width , random(-1, 1) * 2 * height );
     drawornot = true;
   }
