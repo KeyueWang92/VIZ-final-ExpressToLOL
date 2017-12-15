@@ -1,32 +1,54 @@
-class Button {
-  public String label;
-  public Float x;
-  public Float y;
-  public Float wid = 55.0;
-  public Float hgt = 30.0;
-  public int c = 50;
-  public boolean selected = false;
-  public Button(String label, float x, float y) {
-    this.label = label;
-    this.x = x;
-    this.y = y*50;
-  }
-  public void buttondraw(){
-    noStroke();
-    fill(c);
-    rect(x,y,wid,hgt,5);
-    fill(255);
-    text(label,x+5,y+20);
-  }   
+class Button{
+  float x,y,wid,hgt;
+  String str;
+  PImage img;
+  boolean bg;
   
-  public boolean mouseOn(){
-    if (mouseX >= x && mouseX <= x + wid && mouseY >= y && mouseY <= y + hgt) {
-      c = 100;
-      return true;
+  Button(float x, float y, float wid, float hgt, String str) {
+    this.x = x;
+    this.y = y;
+    this.wid = wid;
+    this.hgt = hgt;
+    this.str = str;
+    bg = false;
+  }
+  
+  Button(float x, float y, float wid, float hgt, String str, PImage img) {
+    this.x = x;
+    this.y = y;
+    this.wid = wid;
+    this.hgt = hgt;
+    this.str = str;
+    this.img = img;
+    bg = true;
+  }
+  
+  boolean inBound() {
+      return (mouseX >= x) && (mouseX <= x + wid) &&
+            (mouseY >= y) && (mouseY <= y+hgt);
+  }
+  
+  void draw() {
+    if(!bg) {
+      if (inBound()) {
+        fill(22,33,45);
+      }
+      else {
+        fill(22,33,45,60);
+      }
+      textSize(12);
+      noStroke();
+      rect(x,y,wid,hgt,5);
+      textAlign(CENTER, CENTER);
+      fill(255);
+      text(str, x+wid/2, y+hgt/2);
     }
     else {
-      c = 50;
-      return false;
+      image(img, x, y);
+      textSize(12);
+      textAlign(CENTER, CENTER);
+      fill(255);
+      text(str, x+wid/2, y+hgt/2);
     }
   }
 }
