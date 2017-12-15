@@ -55,10 +55,10 @@ void setup() {
   for(int i = 0; i < temp_total; i++) {
     if_clicked[i] = false;
   }
-  
   p = new Parser("database.csv");
+  //predict(str1,str2);
   comparison = new multi(clicked,p);
-    sing = new single(p);
+  sing = new single(p);
   /*
   for(int i = 0; i < 4; i++) {
     path = "icon/"+str(i)+".jpg";
@@ -67,6 +67,8 @@ void setup() {
     iconobj[i] = temp;
   }
   */
+
+  
 }
 
 void draw() {
@@ -127,6 +129,8 @@ void draw() {
     sing.draw(clicked.get(0));
   }
   else if (cur_state == 2) {
+    //comparison = new multi(clicked,p);
+    comparison.clicked = clicked;
     path = "multi-bg.jpg";
     img = loadImage(path);
     image(img,0,0);
